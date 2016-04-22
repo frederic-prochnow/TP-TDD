@@ -54,8 +54,25 @@ public class RomanNumerals {
 	}
 
 	public String convertFromRoman(String romain) {
+		int resultat = 0;
+		char[] charc = {'I','V','X','L','C','D','M'};
+		int [] intva = {1,5,10,50,100,500,1000};
 		
-		return null;
+		for(int j=0; j<romain.length();j++){
+			char c = romain.charAt(j);
+			for(int k=0; k<charc.length;k++){
+				if(charc[k]==c) {
+					resultat += intva[k];
+				}
+				char c_p_1 = romain.charAt(k+1);
+				
+				if(intva[k] > intva[k+1]) {
+					int valeur = intva[k+1]-intva[k];
+					resultat -= 2*valeur;
+				}
+			}
+		}
+		return ""+resultat;
 	}
 
 }
