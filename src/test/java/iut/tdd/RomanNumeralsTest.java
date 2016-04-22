@@ -30,17 +30,6 @@ public class RomanNumeralsTest {
 		Assert.assertEquals(expected, actual);
 	}
 	@Test
-	public void should_return_IV_when_4() {
-		//Given
-		String input = "4";
-		String expected = "IV";
-		RomanNumerals romanNumeral = new RomanNumerals();
-		//When
-		String actual = romanNumeral.convertToRoman(input);
-		//Then
-		Assert.assertEquals(expected, actual);
-	}
-	@Test
 	public void should_return_V_when_5 () {
 		//Given
 		String input = "5";
@@ -72,11 +61,34 @@ public class RomanNumeralsTest {
 		String actual = romanNumeral.convertToRoman(input);
 		//Then
 		Assert.assertEquals(expected, actual);
-	}@Test
+	}
+	@Test
 	public void should_return_X_when_10 () {
 		//Given
 		String input = "10";
 		String expected = "X";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void should_return_CCXXI_when_221 () {
+		//Given
+		String input = "221";
+		String expected = "CCXXI";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void should_return_MMMDCCCXL_when_3840() {
+		//Given
+		String input = "3840";
+		String expected = "MMMDCCCXL";
 		RomanNumerals romanNumeral = new RomanNumerals();
 		//When
 		String actual = romanNumeral.convertToRoman(input);

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class RomanNumerals {
 	String[] unite = {"I","II","III","IV","V","VI","VII","VIII","IX"};
 	String[] dizaine = {"X","XX","XXX","XL","L","LX","LXX","LXXX","XC"};
-	String[] centaine = {"C","CC","CCC","CD","D","DC","DCC","DCC","CM"};
+	String[] centaine = {"C","CC","CCC","CD","D","DC","DCC","DCCC","CM"};
 	String[] millieme = {"M","MM","MMM","MMMM"};
 	
 	
@@ -55,11 +55,6 @@ public class RomanNumerals {
 
 	public String convertFromRoman(String romain) {
 		
-		/*for(int i= 0; i < chiffrearabe.length ; i++) {
-			if(chiffreromain[i].equals(romain)){
-				return chiffrearabe[i];
-			}
-		}*/
 		return null;
 	}
 
